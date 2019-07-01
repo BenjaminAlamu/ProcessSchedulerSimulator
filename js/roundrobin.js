@@ -1,8 +1,11 @@
 var roundRobin = function (quantum, switchTime) {
     'use strict';
+    var min=1; 
+    var max=quantum;  
+
 
     // set the time quantum and the time required for context switching
-    this.quantum = quantum;
+    this.quantum = Math.random() * (+max - +min) + +min;
     this.switchTime = switchTime;
 
     // run a process if available instead of dispatcher at the beginning
